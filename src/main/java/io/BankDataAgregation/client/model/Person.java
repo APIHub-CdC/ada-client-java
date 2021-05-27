@@ -1,68 +1,87 @@
 package io.BankDataAgregation.client.model;
 
 import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
+import java.util.ArrayList;
+import java.util.List;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
-
-@ApiModel(description = "Encrypted Bank Information.")
 
 public class Person {
   @SerializedName("customers")
-  private Customer customers = null;
+  private List<Customer> customers = null;
 
   @SerializedName("cards")
-  private Card cards = null;
+  private List<Card> cards = null;
 
   @SerializedName("accounts")
-  private Account accounts = null;
+  private List<Account> accounts = null;
 
   @SerializedName("summary")
   private AccountingSummary summary = null;
 
-  public Person customers(Customer customers) {
+  public Person customers(List<Customer> customers) {
     this.customers = customers;
     return this;
   }
 
-  @ApiModelProperty(value = "")
-  public Customer getCustomers() {
+  public Person addCustomersItem(Customer customersItem) {
+    if (this.customers == null) {
+      this.customers = new ArrayList<Customer>();
+    }
+    this.customers.add(customersItem);
+    return this;
+  }
+
+  
+  public List<Customer> getCustomers() {
     return customers;
   }
 
-  public void setCustomers(Customer customers) {
+  public void setCustomers(List<Customer> customers) {
     this.customers = customers;
   }
 
-  public Person cards(Card cards) {
+  public Person cards(List<Card> cards) {
     this.cards = cards;
     return this;
   }
 
-  @ApiModelProperty(value = "")
-  public Card getCards() {
+  public Person addCardsItem(Card cardsItem) {
+    if (this.cards == null) {
+      this.cards = new ArrayList<Card>();
+    }
+    this.cards.add(cardsItem);
+    return this;
+  }
+
+  
+  public List<Card> getCards() {
     return cards;
   }
 
-  public void setCards(Card cards) {
+  public void setCards(List<Card> cards) {
     this.cards = cards;
   }
 
-  public Person accounts(Account accounts) {
+  public Person accounts(List<Account> accounts) {
     this.accounts = accounts;
     return this;
   }
 
-   
-  @ApiModelProperty(value = "")
-  public Account getAccounts() {
+  public Person addAccountsItem(Account accountsItem) {
+    if (this.accounts == null) {
+      this.accounts = new ArrayList<Account>();
+    }
+    this.accounts.add(accountsItem);
+    return this;
+  }
+
+  
+  public List<Account> getAccounts() {
     return accounts;
   }
 
-  public void setAccounts(Account accounts) {
+  public void setAccounts(List<Account> accounts) {
     this.accounts = accounts;
   }
 
@@ -71,7 +90,6 @@ public class Person {
     return this;
   }
 
-  @ApiModelProperty(value = "")
   public AccountingSummary getSummary() {
     return summary;
   }

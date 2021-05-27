@@ -3,7 +3,6 @@ package io.BankDataAgregation.client.model;
 import java.util.Objects;
 
 import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,7 +37,6 @@ public class Customer {
     return this;
   }
 
-  @ApiModelProperty(value = "Customer document id")
   public String getId() {
     return id;
   }
@@ -60,8 +58,6 @@ public class Customer {
     return this;
   }
 
-  
-  @ApiModelProperty(value = "Array of customer address")
   public List<String> getAddress() {
     return address;
   }
@@ -75,7 +71,6 @@ public class Customer {
     return this;
   }
 
-  @ApiModelProperty(value = "Customer document id")
   public String getDocument() {
     return document;
   }
@@ -89,7 +84,6 @@ public class Customer {
     return this;
   }
 
-  @ApiModelProperty(value = "Customer birth date. <br>**Format**: YYYY-MM-DD")
   public String getBirthDate() {
     return birthDate;
   }
@@ -103,8 +97,7 @@ public class Customer {
     return this;
   }
 
-   
-  @ApiModelProperty(value = "Customer full name")
+  
   public String getNames() {
     return names;
   }
@@ -126,8 +119,6 @@ public class Customer {
     return this;
   }
 
-   
-  @ApiModelProperty(value = "Array of phone numbers")
   public List<String> getPhones() {
     return phones;
   }
@@ -149,8 +140,7 @@ public class Customer {
     return this;
   }
 
-   
-  @ApiModelProperty(value = "Array of customer email")
+  
   public List<String> getEmails() {
     return emails;
   }
@@ -172,8 +162,6 @@ public class Customer {
     return this;
   }
 
-   
-  @ApiModelProperty(value = "")
   public List<AccountsObj> getAccountsObj() {
     return accountsObj;
   }
@@ -225,7 +213,6 @@ public class Customer {
     return sb.toString();
   }
 
-  
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";

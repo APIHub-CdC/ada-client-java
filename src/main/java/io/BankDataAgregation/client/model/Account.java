@@ -2,14 +2,8 @@ package io.BankDataAgregation.client.model;
 
 import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
-
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
 import java.util.ArrayList;
 import java.util.List;
-
-@ApiModel(description = "Accounts information")
 
 public class Account {
   @SerializedName("customers")
@@ -25,7 +19,7 @@ public class Account {
   private Integer bankId = null;
 
   @SerializedName("balance")
-  private Integer balance = null;
+  private Float balance = null;
 
   @SerializedName("_id")
   private String id = null;
@@ -55,7 +49,7 @@ public class Account {
     return this;
   }
 
-  @ApiModelProperty(value = "Array of customers document number")
+  
   public List<String> getCustomers() {
     return customers;
   }
@@ -69,7 +63,7 @@ public class Account {
     return this;
   }
 
-  @ApiModelProperty(value = "Account ISO 4217 Currency Code")
+  
   public String getCurrency() {
     return currency;
   }
@@ -83,7 +77,7 @@ public class Account {
     return this;
   }
 
-  @ApiModelProperty(value = "Account last update. ISO 8601 date format")
+  
   public String getLastUpdate() {
     return lastUpdate;
   }
@@ -97,8 +91,8 @@ public class Account {
     return this;
   }
 
+
   
-  @ApiModelProperty(value = "Account bank ID number")
   public Integer getBankId() {
     return bankId;
   }
@@ -107,17 +101,18 @@ public class Account {
     this.bankId = bankId;
   }
 
-  public Account balance(Integer balance) {
+  public Account balance(Float balance) {
     this.balance = balance;
     return this;
   }
 
-  @ApiModelProperty(value = "Account balance. Amount in cents")
-  public Integer getBalance() {
+   
+  
+  public Float getBalance() {
     return balance;
   }
 
-  public void setBalance(Integer balance) {
+  public void setBalance(Float balance) {
     this.balance = balance;
   }
 
@@ -126,8 +121,8 @@ public class Account {
     return this;
   }
 
-
-  @ApiModelProperty(value = "Account ID, IBAN number")
+   
+  
   public String getId() {
     return id;
   }
@@ -141,7 +136,7 @@ public class Account {
     return this;
   }
 
-  @ApiModelProperty(value = "Account name")
+  
   public String getName() {
     return name;
   }
@@ -155,7 +150,8 @@ public class Account {
     return this;
   }
 
-  @ApiModelProperty(value = "Account creation date. <br>**Format**: YYYY-MM-DDTHH:MM:SS")
+  
+  
   public String getCreationDate() {
     return creationDate;
   }
@@ -169,8 +165,8 @@ public class Account {
     return this;
   }
 
+ 
   
-  @ApiModelProperty(value = "Account bank name")
   public String getBankName() {
     return bankName;
   }
@@ -184,7 +180,8 @@ public class Account {
     return this;
   }
 
-  @ApiModelProperty(value = "Account bank group ID")
+  
+  
   public Integer getBankGroupId() {
     return bankGroupId;
   }
@@ -239,6 +236,7 @@ public class Account {
     sb.append("}");
     return sb.toString();
   }
+
 
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
