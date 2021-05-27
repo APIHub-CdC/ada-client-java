@@ -2,7 +2,6 @@ package io.BankDataAgregation.client.model;
 
 import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModelProperty;
 
 
 public class AccountsObj {
@@ -17,7 +16,8 @@ public class AccountsObj {
     return this;
   }
 
-  @ApiModelProperty(value = "Linked customer IBAN number")
+ 
+  
   public String getId() {
     return id;
   }
@@ -31,7 +31,8 @@ public class AccountsObj {
     return this;
   }
 
-  @ApiModelProperty(value = "Ownership of the customer in the account")
+
+  
   public String getParticipation() {
     return participation;
   }
@@ -70,6 +71,7 @@ public class AccountsObj {
     sb.append("}");
     return sb.toString();
   }
+
 
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
