@@ -1,11 +1,8 @@
+
 package io.BankDataAgregation.client.model;
 
 import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
-
-import io.swagger.annotations.ApiModelProperty;
-
 import java.math.BigDecimal;
 
 public class MonthlyAccountingSummary {
@@ -35,8 +32,7 @@ public class MonthlyAccountingSummary {
     return this;
   }
 
-   
-  @ApiModelProperty(example = "2020-11", value = "Sumary date")
+
   public String getDate() {
     return date;
   }
@@ -50,8 +46,6 @@ public class MonthlyAccountingSummary {
     return this;
   }
 
-
-  @ApiModelProperty(example = "9865.67", value = "Field average balance")
   public Float getAvgBalance() {
     return avgBalance;
   }
@@ -65,8 +59,6 @@ public class MonthlyAccountingSummary {
     return this;
   }
 
-
-  @ApiModelProperty(example = "6067.0", value = "Field minimum balance")
   public Float getMinBalance() {
     return minBalance;
   }
@@ -80,8 +72,6 @@ public class MonthlyAccountingSummary {
     return this;
   }
 
-
-  @ApiModelProperty(example = "8190.45", value = "Field maximum balance")
   public Float getMaxBalance() {
     return maxBalance;
   }
@@ -95,8 +85,6 @@ public class MonthlyAccountingSummary {
     return this;
   }
 
-
-  @ApiModelProperty(example = "11137.67", value = "Field total income")
   public Float getTotalIncome() {
     return totalIncome;
   }
@@ -110,8 +98,6 @@ public class MonthlyAccountingSummary {
     return this;
   }
 
-
-  @ApiModelProperty(example = "-7665.33", value = "Field total expenses")
   public Float getTotalExpense() {
     return totalExpense;
   }
@@ -125,8 +111,6 @@ public class MonthlyAccountingSummary {
     return this;
   }
 
-
-  @ApiModelProperty(example = "1.0", value = "total transactions")
   public BigDecimal getTransactions() {
     return transactions;
   }
@@ -175,7 +159,6 @@ public class MonthlyAccountingSummary {
     sb.append("}");
     return sb.toString();
   }
-
 
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {

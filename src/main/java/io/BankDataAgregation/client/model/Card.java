@@ -1,12 +1,7 @@
 package io.BankDataAgregation.client.model;
 
 import java.util.Objects;
-
 import com.google.gson.annotations.SerializedName;
-
-import io.swagger.annotations.ApiModelProperty;
-
-import org.threeten.bp.LocalDate;
 
 
 public class Card {
@@ -32,10 +27,10 @@ public class Card {
   private String name = null;
 
   @SerializedName("credit_available")
-  private Integer creditAvailable = null;
+  private Float creditAvailable = null;
 
   @SerializedName("credit_limit")
-  private Integer creditLimit = null;
+  private Float creditLimit = null;
 
   @SerializedName("type")
   private Integer type = null;
@@ -44,10 +39,10 @@ public class Card {
   private String network = null;
 
   @SerializedName("creation_date")
-  private LocalDate creationDate = null;
+  private String creationDate = null;
 
   @SerializedName("expiration_date")
-  private LocalDate expirationDate = null;
+  private String expirationDate = null;
 
   @SerializedName("active")
   private Boolean active = null;
@@ -62,17 +57,16 @@ public class Card {
   private String paymentDueDate = null;
 
   @SerializedName("minimum_payment")
-  private String minimumPayment = null;
+  private Float minimumPayment = null;
 
   @SerializedName("payment_to_avoid_interest")
-  private String paymentToAvoidInterest = null;
+  private Float paymentToAvoidInterest = null;
 
   public Card id(Integer id) {
     this.id = id;
     return this;
   }
 
-  @ApiModelProperty(value = "Unnax ID for the card")
   public Integer getId() {
     return id;
   }
@@ -87,7 +81,7 @@ public class Card {
   }
 
 
-  @ApiModelProperty(value = "Card PAN (last 4 digits)")
+  
   public String getPartialCardNumber() {
     return partialCardNumber;
   }
@@ -101,8 +95,6 @@ public class Card {
     return this;
   }
 
-
-  @ApiModelProperty(value = "Account linked to the card if available")
   public String getAccount() {
     return account;
   }
@@ -116,7 +108,7 @@ public class Card {
     return this;
   }
 
-  @ApiModelProperty(value = "Associated card bank ID number")
+
   public Integer getBankId() {
     return bankId;
   }
@@ -131,7 +123,6 @@ public class Card {
   }
 
 
-  @ApiModelProperty(value = "Associated card bank name")
   public String getBankName() {
     return bankName;
   }
@@ -145,8 +136,7 @@ public class Card {
     return this;
   }
 
-
-  @ApiModelProperty(value = "Card ISO 4217 Currency Code")
+   
   public String getCurrency() {
     return currency;
   }
@@ -160,7 +150,7 @@ public class Card {
     return this;
   }
 
-  @ApiModelProperty(value = "Card name")
+  
   public String getName() {
     return name;
   }
@@ -169,32 +159,31 @@ public class Card {
     this.name = name;
   }
 
-  public Card creditAvailable(Integer creditAvailable) {
+  public Card creditAvailable(Float creditAvailable) {
     this.creditAvailable = creditAvailable;
     return this;
   }
 
-  
-  @ApiModelProperty(value = "Card available credit. Amount in cents")
-  public Integer getCreditAvailable() {
+
+  public Float getCreditAvailable() {
     return creditAvailable;
   }
 
-  public void setCreditAvailable(Integer creditAvailable) {
+  public void setCreditAvailable(Float creditAvailable) {
     this.creditAvailable = creditAvailable;
   }
 
-  public Card creditLimit(Integer creditLimit) {
+  public Card creditLimit(Float creditLimit) {
     this.creditLimit = creditLimit;
     return this;
   }
 
-  @ApiModelProperty(value = "Card limit. Amount in cents")
-  public Integer getCreditLimit() {
+
+  public Float getCreditLimit() {
     return creditLimit;
   }
 
-  public void setCreditLimit(Integer creditLimit) {
+  public void setCreditLimit(Float creditLimit) {
     this.creditLimit = creditLimit;
   }
 
@@ -203,8 +192,7 @@ public class Card {
     return this;
   }
 
-  
-  @ApiModelProperty(value = "ID of the card type:  <br>debit = 0 <br>credit = 1 <br>charge = 2 (prepaid card)")
+ 
   public Integer getType() {
     return type;
   }
@@ -219,7 +207,6 @@ public class Card {
   }
 
 
-  @ApiModelProperty(value = "Card brand (VISA, Mastercard, etc)")
   public String getNetwork() {
     return network;
   }
@@ -228,32 +215,31 @@ public class Card {
     this.network = network;
   }
 
-  public Card creationDate(LocalDate creationDate) {
+  public Card creationDate(String creationDate) {
     this.creationDate = creationDate;
     return this;
   }
 
-  
-  @ApiModelProperty(value = "Card creation date if available. <br>**Format**: YYYY-MM-DD")
-  public LocalDate getCreationDate() {
+
+  public String getCreationDate() {
     return creationDate;
   }
 
-  public void setCreationDate(LocalDate creationDate) {
+  public void setCreationDate(String creationDate) {
     this.creationDate = creationDate;
   }
 
-  public Card expirationDate(LocalDate expirationDate) {
+  public Card expirationDate(String expirationDate) {
     this.expirationDate = expirationDate;
     return this;
   }
 
-  @ApiModelProperty(value = "Card expiration date if available. <br>**Format**: YYYY-MM-DD")
-  public LocalDate getExpirationDate() {
+
+  public String getExpirationDate() {
     return expirationDate;
   }
 
-  public void setExpirationDate(LocalDate expirationDate) {
+  public void setExpirationDate(String expirationDate) {
     this.expirationDate = expirationDate;
   }
 
@@ -262,7 +248,7 @@ public class Card {
     return this;
   }
 
-  @ApiModelProperty(value = "Card status. Active = true")
+
   public Boolean isActive() {
     return active;
   }
@@ -276,7 +262,7 @@ public class Card {
     return this;
   }
 
-  @ApiModelProperty(value = "Card last update date. <br>**Format**: YYYY-MM-DD")
+
   public String getLastUpdate() {
     return lastUpdate;
   }
@@ -290,7 +276,7 @@ public class Card {
     return this;
   }
 
-  @ApiModelProperty(value = "Period ending date (Fecha de corte)")
+ 
   public String getPeriodEndingDate() {
     return periodEndingDate;
   }
@@ -304,7 +290,7 @@ public class Card {
     return this;
   }
 
-  @ApiModelProperty(value = "Payment due date (Fecha límite de pago)")
+
   public String getPaymentDueDate() {
     return paymentDueDate;
   }
@@ -313,31 +299,31 @@ public class Card {
     this.paymentDueDate = paymentDueDate;
   }
 
-  public Card minimumPayment(String minimumPayment) {
+  public Card minimumPayment(Float minimumPayment) {
     this.minimumPayment = minimumPayment;
     return this;
   }
 
-  @ApiModelProperty(value = "Minimum payment to avoid arrears ")
-  public String getMinimumPayment() {
+
+  public Float getMinimumPayment() {
     return minimumPayment;
   }
 
-  public void setMinimumPayment(String minimumPayment) {
+  public void setMinimumPayment(Float minimumPayment) {
     this.minimumPayment = minimumPayment;
   }
 
-  public Card paymentToAvoidInterest(String paymentToAvoidInterest) {
+  public Card paymentToAvoidInterest(Float paymentToAvoidInterest) {
     this.paymentToAvoidInterest = paymentToAvoidInterest;
     return this;
   }
 
-  @ApiModelProperty(value = "Total payment up to the period ending date. (Adeudado al corte)")
-  public String getPaymentToAvoidInterest() {
+
+  public Float getPaymentToAvoidInterest() {
     return paymentToAvoidInterest;
   }
 
-  public void setPaymentToAvoidInterest(String paymentToAvoidInterest) {
+  public void setPaymentToAvoidInterest(Float paymentToAvoidInterest) {
     this.paymentToAvoidInterest = paymentToAvoidInterest;
   }
 
@@ -405,6 +391,7 @@ public class Card {
     sb.append("}");
     return sb.toString();
   }
+
 
   private String toIndentedString(java.lang.Object o) {
     if (o == null) {
